@@ -59,6 +59,8 @@ python3 mask_multi_both.py --metric_name gradient
 python3 mask_multi_both.py --metric_name gxo
 ```
 ```
+
+Then we can check the results in the path: "result/truthfulqa/res/both".
 python3 mask_multi_both.py --metric_name snip
 ```
 ```
