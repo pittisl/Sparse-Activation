@@ -66,7 +66,7 @@ python3 main.py --metric_name gxo
 ```
 python3 main.py --metric_name snip
 ```
-#### Corrected GxO (cor_gxo)
+#### Corrected GxO
 ```
 python3 main.py --metric_name cor_gxo
 ```
