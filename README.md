@@ -70,7 +70,7 @@ python3 main.py --metric_name snip
 ```
 python3 main.py --metric_name cor_gxo
 ```
-We can then check the accuracy-sparsity trade-off curves in the path: 'result/truthfulqa/res/both'.
+We can then check the accuracy-sparsity trade-off curves in the path: `result/truthfulqa/res/both`.
 
 ## Citation
 ```
