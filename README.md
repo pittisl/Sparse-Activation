@@ -36,17 +36,17 @@ python3 Mag_mlp.py
 we can use the following code to generate the various attribution-based scores of each attention head and MLP neurons
 #### gradient
 ```
-python3 IG_attention.py --metric gradient
+python3 attribution_attention.py --metric gradient
 ```
 
 #### Gradient*Output (GxO)
 ```
-python3 IG_attention.py --metric gxo
+python3 attribution_attention.py --metric gxo
 ```
 
 #### Integrated gradients (IG) with 20 interpolations (The number of interpolations can be any positive integer)
 ```
-python3 IG_attention.py --metric ig --n_steps 20
+python3 attribution_attention.py --metric ig --n_steps 20
 ```
 
 ### Apply sparse activation based on different attribution scores and plot the accuracy-sparsity trade-off curves
