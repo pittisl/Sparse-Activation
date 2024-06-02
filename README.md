@@ -49,7 +49,7 @@ python3 attribution_attention.py --metric gxo
 python3 attribution_attention.py --metric ig --n_steps 20
 ```
 
-### Apply sparse activation based on different attribution scores and plot the accuracy-sparsity trade-off curves
+### Apply sparse activation based on output magnitude and different attribution scores and plot the accuracy-sparsity trade-off curves
 ```
 python3 main.py --metric_name magnitude
 ```
