@@ -51,5 +51,5 @@ for sample_idx in tqdm(range(num_data), desc="Generating labels"):
 
 
 # save the labels in the file label_generation
-with open('labels2.json', 'w') as file:
+with open('labels.json', 'w') as file:
     json.dump(label_list, file)
