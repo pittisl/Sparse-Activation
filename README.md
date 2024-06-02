@@ -43,7 +43,7 @@ python3 IG_attention.py --metric gradient
 python3 IG_attention.py --metric gxo
 ```
 
-#### Integrated gradients (IG) with 20 interpolations (The number of interpolations can be changed from 0 to 
+#### Integrated gradients (IG) with 20 interpolations (The number of interpolations can be any positive integer)
 ```
 python3 IG_attention.py --metric ig --n_steps 20
 ```
@@ -65,3 +65,8 @@ python3 mask_multi_both.py --metric_name snip
 python3 mask_multi_both.py --metric_name cor_gxo
 ```
 Then we can check the results in the path: "result/truthfulqa/res/both".
+
+## Citation
+```
+
+```
