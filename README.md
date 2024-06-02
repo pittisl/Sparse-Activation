@@ -43,7 +43,7 @@ python3 IG_attention.py --metric gradient
 python3 IG_attention.py --metric gxo
 ```
 
-#### Integrated gradients (IG)
+#### Integrated gradients (IG) with 20 interpolations (The number of interpolations can be changed from 0 to 
 ```
 python3 IG_attention.py --metric ig --n_steps 20
 ```
