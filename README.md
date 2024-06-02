@@ -1,7 +1,7 @@
 # Achieving Sparse Activation in Small Language Models
 
 ## Introduction
-This is the official code repository for the paper ["Achieving Sparse Activation in Small Language Models"](). Sparse activation selectively activates only an input-dependent set of neurons in inference, is a useful technique to reduce the computing cost of Large Language Models (LLMs) without retraining or adaptation efforts. We proposed a new attribution metric for Small Language Models (SLMs) that can achieve 80% sparsification ratio with $<$5% model accuracy loss.
+This is the official code repository for the paper ["Achieving Sparse Activation in Small Language Models"](). We aim to achieve sparse activation in SLMs. We demonstrated that the existing magnitude-based sparse activation cannot be applied to SLMs, and using gradient-based attribution scores for sparse activation is a better choice. By applying a corrective term onto the existing GxO attribution metric, our approach can achieve 80% sparsification ratio on SLMs with <5% accuracy loss.
 
 ## Requirement
 Install all the required packages.
