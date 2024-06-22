@@ -1,7 +1,7 @@
 # Achieving Sparse Activation in Small Language Models
 
 ## Introduction
-This is the official code repository for the paper ["Achieving Sparse Activation in Small Language Models"](). We aim to achieve sparse activation in SLMs. We demonstrated that the existing magnitude-based sparse activation cannot be applied to SLMs, and using gradient-based attribution scores for sparse activation is a better choice. By applying a corrective term onto the existing GxO attribution metric, our approach can achieve 80% sparsification ratio on SLMs with <5% accuracy loss.
+This is the official code repository for the paper ["Achieving Sparse Activation in Small Language Models"](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://arxiv.org/pdf/2406.06562). We aim to achieve sparse activation in SLMs. We demonstrated that the existing magnitude-based sparse activation cannot be applied to SLMs, and using gradient-based attribution scores for sparse activation is a better choice. By applying a corrective term onto the existing GxO attribution metric, our approach can achieve 80% sparsification ratio on SLMs with <5% accuracy loss.
 
 ## Requirement
 Install all the required packages.
