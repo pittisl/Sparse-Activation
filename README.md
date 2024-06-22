@@ -74,5 +74,11 @@ We can then check the accuracy-sparsity trade-off curves in the path: `result/tr
 
 ## Citation
 ```
-
+@article{song2024achieving,
+  title={Achieving Sparse Activation in Small Language Models},
+  author={Song, Jifeng and Huang, Kai and Yin, Xiangyu and Yang, Boyuan and Gao, Wei},
+  journal={arXiv e-prints},
+  pages={arXiv--2406},
+  year={2024}
+}
 ```
