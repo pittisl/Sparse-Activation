@@ -453,7 +453,7 @@ class GenerationMixin:
                          criterion=nn2.CrossEntropyLoss()
                          loss = criterion(pre, solution)
 
-                         gradients = torch.autograd.grad(-loss, features_out_hook[0])[0]
+                         gradients = torch.autograd.grad(loss, features_out_hook[0])[0]
                          if n==0:
                              grad=gradients[:, -1:, :]
                          elif n != n_s+1-1:    #n_s+1-1
