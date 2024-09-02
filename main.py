@@ -117,17 +117,17 @@ def preprocess(metric_name, percentage, mask_tensor_mlp1, mask_tensor_mlp2, mask
     for sample_idx in range(num_data):
         threshold1 = compute_threshold(abs(mask_tensor_mlp1[sample_idx]), percentage)
         mask_mlp1 = apply_threshold(abs(mask_tensor_mlp1[sample_idx]), threshold1)
-        threshold2 = compute_threshold(mask_tensor_mlp2[sample_idx], percentage)
-        mask_mlp2 = apply_threshold(mask_tensor_mlp2[sample_idx], threshold2)
-        threshold3 = compute_threshold(mask_tensor_mlp3[sample_idx], percentage)
-        mask_mlp3 = apply_threshold(mask_tensor_mlp3[sample_idx], threshold3) 
+        threshold2 = compute_threshold(-mask_tensor_mlp2[sample_idx], percentage)
+        mask_mlp2 = apply_threshold(-mask_tensor_mlp2[sample_idx], threshold2)
+        threshold3 = compute_threshold(-mask_tensor_mlp3[sample_idx], percentage)
+        mask_mlp3 = apply_threshold(-mask_tensor_mlp3[sample_idx], threshold3) 
         
         threshold_head1 = compute_threshold(abs(mask_tensor_head1[sample_idx]), percentage)
         mask_head1 = apply_threshold(abs(mask_tensor_head1[sample_idx]), threshold_head1)
-        threshold_head2 = compute_threshold(mask_tensor_head2[sample_idx], percentage)
-        mask_head2 = apply_threshold(mask_tensor_head2[sample_idx], threshold_head2)
-        threshold_head3 = compute_threshold(mask_tensor_head3[sample_idx], percentage)
-        mask_head3 = apply_threshold(mask_tensor_head3[sample_idx], threshold_head2)
+        threshold_head2 = compute_threshold(-mask_tensor_head2[sample_idx], percentage)
+        mask_head2 = apply_threshold(-mask_tensor_head2[sample_idx], threshold_head2)
+        threshold_head3 = compute_threshold(-mask_tensor_head3[sample_idx], percentage)
+        mask_head3 = apply_threshold(-mask_tensor_head3[sample_idx], threshold_head2)
 
         if metric_name == "magnitude":
             mask_mlp = mask_mlp1
