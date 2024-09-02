@@ -30,8 +30,9 @@ def main(args):
     def set_seed(seed):
         torch.manual_seed(seed)
 
-    def generate_outputs(model, inputs_ids, solution, num_layer):
+    def generate_outputs(model, inputs_ids, solution, n_steps):
         combine_ig_list = []
+        num_layer = 32
 
         # IG scores require per layer calculation
         for layer_idx in range(num_layer):
@@ -48,7 +49,7 @@ def main(args):
         ig_tensor = torch.stack(combine_ig_list, dim=1)[:, :, 0, :]
         return ig_tensor.detach()
 
-    def preprocess(num_data, text_input_list, text_solution_list, tokenizer, model, base, num_layer):
+    def preprocess(num_data, text_input_list, text_solution_list, tokenizer, model, base, n_steps):
         tensor_list = []
         for sample_idx in tqdm(range(num_data), desc="Processing"):
             text_input = "Instruct: " + text_input_list[sample_idx] + "\nOutput:"
@@ -58,7 +59,7 @@ def main(args):
             inputs_ids = inputs.input_ids
             solution = solution.input_ids
 
-            ig_tensor = generate_outputs(model, inputs_ids, solution, num_layer)
+            ig_tensor = generate_outputs(model, inputs_ids, solution, n_steps)
 
             tensor_list.append(ig_tensor)
 
