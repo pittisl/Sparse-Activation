@@ -33,7 +33,9 @@ def main(args):
 
     def generate_outputs(model, inputs_ids, solution, num_steps):
         combine_ig_list = []
-        for layer_idx in range(num_steps):
+        num_layer = 32
+        
+        for layer_idx in range(num_layer):
             outputs = GenerationMixin.greedy_search(
                 model, inputs_ids, solution, 
                 stopping_criteria=StoppingCriteriaList([MaxLengthCriteria(max_length=inputs_ids.size(1) + solution.size(1))]), 
