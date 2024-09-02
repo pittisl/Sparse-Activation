@@ -447,7 +447,7 @@ class GenerationMixin:
                          loss = criterion(pre, solution)
 
 
-                         gradients = torch.autograd.grad(-loss, features_out_hook[0])[0]
+                         gradients = torch.autograd.grad(loss, features_out_hook[0])[0]
                          
                          
                          if n==0:
